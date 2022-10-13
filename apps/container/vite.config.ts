@@ -1,5 +1,5 @@
 import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import { defineConfig, splitVendorChunkPlugin } from 'vite'
 import federation from '@originjs/vite-plugin-federation'
 
 export default defineConfig(({ mode }) => {
@@ -11,13 +11,14 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       react(),
+      splitVendorChunkPlugin(),
       federation({
         name: 'container',
         filename: 'container.js',
         remotes: {
           subapp: `${isLive ? 'http://localhost:5001' : ''}/assets/subapp.js`,
         },
-        shared: ['react', 'react-dom', 'react-router-dom'],
+        shared: ['react', 'react-dom', 'react-router-dom', 'tailwindcss'],
       }),
     ],
     build: {
