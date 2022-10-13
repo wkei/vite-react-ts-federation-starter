@@ -1,0 +1,24 @@
+{
+  "name": "subapp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "rm -rf dist && tsc && vite build",
+    "livebuild": "tsc && vite build --mode=live",
+    "serve": "vite preview --port 5001 --strictPort"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0"
+  },
+  "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.1.6",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "@vitejs/plugin-react": "^1.3.2",
+    "typescript": "^4.8.4",
+    "vite": "^2.9.13"
+  }
+}
