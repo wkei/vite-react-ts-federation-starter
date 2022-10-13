@@ -11,7 +11,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.4.2"
   },
   "devDependencies": {
     "@originjs/vite-plugin-federation": "^1.1.6",
